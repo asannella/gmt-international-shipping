@@ -41,9 +41,6 @@ p{margin:0 0 12px}
 .badge{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;padding:0 8px;border-radius:12px;background:var(--accent);color:var(--surface);font-size:12px;font-weight:700;margin-right:6px;vertical-align:middle}
 .goal p{color:var(--muted);font-size:15px;margin:6px 0 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
-.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);margin-bottom:14px}
-.toggle button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:600;padding:6px 14px;border-radius:999px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
 .diagram svg{width:100%;height:auto;display:block}
 .diagram svg[hidden]{display:none}
 .diagram .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -115,110 +112,9 @@ body:not(.locked) #gate{display:none}
 
   <h2>How it fits together</h2>
   <div class="card diagram">
-    <div class="toggle" role="group" aria-label="Diagram view">
-      <button type="button" data-view="future" aria-pressed="true">On Shopify</button>
-      <button type="button" data-view="today" aria-pressed="false">Today</button>
-    </div>
 
     <p class="hint">Swipe sideways to see the full diagram.</p>
     <div class="scroll">
-    <!-- TODAY -->
-    <svg id="v-today" viewBox="0 0 1000 560" role="img" aria-label="GMT systems and fulfillment flows today" hidden>
-      <defs>
-        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
-      </defs>
-      <!-- column labels -->
-      <text x="20" y="28" font-size="13" font-weight="700" fill="var(--muted)" letter-spacing="1">SYSTEMS</text>
-      <text x="330" y="28" font-size="13" font-weight="700" fill="var(--muted)" letter-spacing="1">INVENTORY &amp; FULFILLMENT</text>
-      <text x="760" y="28" font-size="13" font-weight="700" fill="var(--muted)" letter-spacing="1">BUYERS</text>
-
-      <!-- systems -->
-      <g>
-        <rect x="20" y="45" width="250" height="92" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="72" font-size="15" font-weight="700" fill="var(--ink)">ASP.NET storefront</text>
-        <text x="36" y="94" font-size="13" fill="var(--muted)">About 25 years old</text>
-        <text x="36" y="113" font-size="13" fill="var(--muted)">No inventory management</text>
-        <text x="36" y="130" font-size="13" fill="var(--muted)">No dimensional-weight rates</text>
-
-        <rect x="20" y="152" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="178" font-size="15" font-weight="700" fill="var(--ink)">Authorize.net</text>
-        <text x="36" y="199" font-size="13" fill="var(--muted)">Vaults cards for P500</text>
-
-        <rect x="20" y="229" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="255" font-size="15" font-weight="700" fill="var(--ink)">Avalara</text>
-        <text x="36" y="276" font-size="13" fill="var(--muted)">US and Canada tax only</text>
-
-        <rect x="20" y="306" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="332" font-size="15" font-weight="700" fill="var(--ink)">UPS contract rates</text>
-        <text x="36" y="353" font-size="13" fill="var(--muted)">Weight-based pricing</text>
-
-        <rect x="20" y="383" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="409" font-size="15" font-weight="700" fill="var(--ink)">Spreadsheets</text>
-        <text x="36" y="430" font-size="13" fill="var(--muted)">Distributor orders, by email</text>
-      </g>
-
-      <!-- locations -->
-      <g>
-        <rect x="330" y="60" width="200" height="70" rx="10" fill="var(--loc-soft)" stroke="var(--loc)"/>
-        <text x="346" y="88" font-size="15" font-weight="700" fill="var(--ink)">Manufacturing, China</text>
-        <text x="346" y="110" font-size="13" fill="var(--muted)">Where games are produced</text>
-
-        <rect x="330" y="230" width="230" height="90" rx="10" fill="var(--loc-soft)" stroke="var(--loc)" stroke-width="2"/>
-        <text x="346" y="258" font-size="15" font-weight="700" fill="var(--ink)">Hanford, CA warehouse</text>
-        <text x="346" y="280" font-size="13" fill="var(--muted)">Ships to every country it</text>
-        <text x="346" y="298" font-size="13" fill="var(--muted)">legally can from the US</text>
-
-        <rect x="560" y="60" width="160" height="70" rx="10" fill="var(--loc-soft)" stroke="var(--loc)"/>
-        <text x="574" y="88" font-size="15" font-weight="700" fill="var(--ink)">Australian</text>
-        <text x="574" y="108" font-size="15" font-weight="700" fill="var(--ink)">distributor (3PL)</text>
-
-        <rect x="560" y="420" width="160" height="70" rx="10" fill="var(--loc-soft)" stroke="var(--loc)" stroke-dasharray="5 4"/>
-        <text x="574" y="448" font-size="15" font-weight="700" fill="var(--ink)">EU partner</text>
-        <text x="574" y="469" font-size="13" fill="var(--muted)">Can't scale with GMT</text>
-      </g>
-
-      <!-- buyers -->
-      <g>
-        <rect x="760" y="60" width="220" height="56" rx="10" fill="var(--surface)" stroke="var(--line)"/>
-        <text x="776" y="94" font-size="15" font-weight="700" fill="var(--ink)">Australian players</text>
-
-        <rect x="760" y="160" width="220" height="56" rx="10" fill="var(--surface)" stroke="var(--line)"/>
-        <text x="776" y="194" font-size="15" font-weight="700" fill="var(--ink)">US players</text>
-
-        <rect x="760" y="245" width="220" height="70" rx="10" fill="var(--surface)" stroke="var(--line)"/>
-        <text x="776" y="273" font-size="15" font-weight="700" fill="var(--ink)">International players</text>
-        <text x="776" y="294" font-size="13" fill="var(--muted)">Canada, UK, rest of world</text>
-
-        <rect x="760" y="345" width="220" height="56" rx="10" fill="var(--surface)" stroke="var(--line)"/>
-        <text x="776" y="379" font-size="15" font-weight="700" fill="var(--ink)">Distributors (B2B)</text>
-
-        <rect x="760" y="427" width="220" height="56" rx="10" fill="var(--surface)" stroke="var(--line)"/>
-        <text x="776" y="461" font-size="15" font-weight="700" fill="var(--ink)">EU players</text>
-      </g>
-
-      <!-- flows -->
-      <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#arr)">
-        <path d="M430 130 L430 226"/>
-        <path d="M530 95 L556 95"/>
-        <path d="M720 88 L756 88"/>
-        <path d="M560 255 C 640 255, 680 188, 756 188"/>
-        <path d="M560 280 L756 280"/>
-        <path d="M560 305 C 640 305, 680 373, 756 373"/>
-        <path d="M480 320 C 480 400, 520 455, 556 455"/>
-        <path d="M720 455 L756 455"/>
-      </g>
-      <text x="438" y="182" font-size="12" fill="var(--muted)">Bulk freight</text>
-      <text x="400" y="398" font-size="12" fill="var(--muted)">Air freight</text>
-
-      <!-- pain badges -->
-      <g font-size="12" font-weight="700" text-anchor="middle">
-        <g><rect x="642" y="266" width="44" height="22" rx="11" fill="var(--accent)"/><text x="664" y="281" fill="var(--surface)">G2 G3</text></g>
-        <g><rect x="220" y="314" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="329" fill="var(--surface)">G3</text></g>
-        <g><rect x="220" y="160" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="175" fill="var(--surface)">G1</text></g>
-        <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--accent)"/><text x="701" y="441" fill="var(--surface)">G2</text></g>
-      </g>
-      <text x="20" y="530" font-size="13" fill="var(--muted)">Red badges mark where each goal's problem shows up today.</text>
-    </svg>
 
     <!-- FUTURE -->
     <svg id="v-future" viewBox="0 0 1000 560" role="img" aria-label="Proposed international setup on Shopify">
@@ -305,7 +201,7 @@ body:not(.locked) #gate{display:none}
       <g font-size="12" font-weight="700" text-anchor="middle">
         <g><rect x="220" y="257" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="272" fill="var(--surface)">G2</text></g>
         <g><rect x="220" y="333" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="348" fill="var(--surface)">G3</text></g>
-        <g><rect x="220" y="125" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="140" fill="var(--surface)">G1</text></g>
+        <g><rect x="228" y="56" width="30" height="22" rx="11" fill="var(--ok)"/><text x="243" y="71" fill="var(--surface)">G1</text></g>
         <g><rect x="220" y="179" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="194" fill="var(--surface)">G1</text></g>
         <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--ok)"/><text x="701" y="441" fill="var(--surface)">G3</text></g>
       </g>
@@ -316,7 +212,6 @@ body:not(.locked) #gate{display:none}
     <div class="legend">
       <span style="--c:var(--sys-soft)">System or tool</span>
       <span style="--c:var(--loc-soft)">Inventory location</span>
-      <span style="--c:var(--accent)">Problem today</span>
       <span style="--c:var(--ok)">Where it's solved</span>
     </div>
   </div>
@@ -446,14 +341,6 @@ body:not(.locked) #gate{display:none}
     e.preventDefault();
     if(pw.value==='gmt2026'){ try{sessionStorage.setItem('gmt-ok','1');}catch(e){} unlock(); }
     else { err.textContent='That password is not right. Try again.'; pw.select(); }
-  });
-  document.querySelectorAll('.toggle button').forEach(function(b){
-    b.addEventListener('click',function(){
-      var v=b.getAttribute('data-view');
-      document.querySelectorAll('.toggle button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-      document.getElementById('v-today').hidden=(v!=='today');
-      document.getElementById('v-future').hidden=(v!=='future');
-    });
   });
 })();
 </script>

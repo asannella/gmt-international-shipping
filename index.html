@@ -108,14 +108,14 @@ body:not(.locked) #gate{display:none}
   <h2>How it fits together</h2>
   <div class="card diagram">
     <div class="toggle" role="group" aria-label="Diagram view">
-      <button type="button" data-view="today" aria-pressed="true">Today</button>
-      <button type="button" data-view="future" aria-pressed="false">On Shopify</button>
+      <button type="button" data-view="future" aria-pressed="true">On Shopify</button>
+      <button type="button" data-view="today" aria-pressed="false">Today</button>
     </div>
 
     <p class="hint">Swipe sideways to see the full diagram.</p>
     <div class="scroll">
     <!-- TODAY -->
-    <svg id="v-today" viewBox="0 0 1000 560" role="img" aria-label="GMT systems and fulfillment flows today">
+    <svg id="v-today" viewBox="0 0 1000 560" role="img" aria-label="GMT systems and fulfillment flows today" hidden>
       <defs>
         <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
       </defs>
@@ -216,7 +216,7 @@ body:not(.locked) #gate{display:none}
     </svg>
 
     <!-- FUTURE -->
-    <svg id="v-future" viewBox="0 0 1000 560" role="img" aria-label="Proposed international setup on Shopify" hidden>
+    <svg id="v-future" viewBox="0 0 1000 560" role="img" aria-label="Proposed international setup on Shopify">
       <defs>
         <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
       </defs>

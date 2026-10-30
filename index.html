@@ -104,16 +104,13 @@ body:not(.locked) #gate{display:none}
 <main aria-hidden="true">
   <div class="eyebrow">GMT Games · International selling · Draft for discussion</div>
   <h1>Getting GMT's games to players worldwide, without the customs surprises</h1>
-  <p class="lede">GMT already ships to every country it legally can from Hanford. The hard part is everything that happens after the box leaves the building: VAT nobody can calculate, duty bills that land on the player's doorstep, shipping costs that don't reflect the real box, and stock that lives in more than one country. This page lays out what we're solving, where GMT is today, and how each piece gets handled on Shopify.</p>
+  <p class="lede">GMT already ships to every country it legally can from Hanford. International players need to be able to pre-order through P500 just like US players, which is why GMT is building on Shopify Markets rather than Managed Markets. That leaves two jobs to solve: getting international taxes and duties collected and remitted correctly, and getting the box to the player for less.</p>
 
   <h2>What the solution needs to do</h2>
   <div class="goals">
-    <div class="goal"><h3><span class="badge">G1</span>Get compliant</h3><p>Stop estimating international VAT, GST and import duties. Calculate them correctly on every order.</p></div>
-    <div class="goal"><h3><span class="badge">G2</span>No surprise customs bills</h3><p>Collect duties and taxes at checkout and show them clearly, so players never pay again on delivery.</p></div>
-    <div class="goal"><h3><span class="badge">G3</span>Lighten the compliance load</h3><p>Reduce or hand off the work of registering, filing and remitting taxes in other countries.</p></div>
-    <div class="goal"><h3><span class="badge">G4</span>Better international rates</h3><p>Lower, accurate shipping costs out of the US, priced on the real box size and weight.</p></div>
-    <div class="goal"><h3><span class="badge">G5</span>One view of every location</h3><p>See and route inventory across Hanford, the Australian distributor, stock coming from China, and future 3PLs.</p></div>
-    <div class="goal"><h3><span class="badge">G6</span>P500 works worldwide</h3><p>International players can pre-order and get charged later, just like US players.</p></div>
+    <div class="goal"><h3><span class="badge">G1</span>Pre-orders for every player</h3><p>Stay on Shopify Markets so international players can place P500 pre-orders and get charged when the game ships.</p></div>
+    <div class="goal"><h3><span class="badge">G2</span>Tax and duty remittance</h3><p>Collect international taxes and duties at checkout, and have them remitted for GMT, so players never get a customs bill on delivery.</p></div>
+    <div class="goal"><h3><span class="badge">G3</span>Lower shipping rates</h3><p>Cheaper international shipping out of the US, priced on the real box size and weight.</p></div>
   </div>
 
   <h2>How it fits together</h2>
@@ -215,13 +212,10 @@ body:not(.locked) #gate{display:none}
 
       <!-- pain badges -->
       <g font-size="12" font-weight="700" text-anchor="middle">
-        <g><rect x="642" y="266" width="44" height="22" rx="11" fill="var(--accent)"/><text x="664" y="281" fill="var(--surface)">G1 G2</text></g>
-        <g><rect x="690" y="266" width="30" height="22" rx="11" fill="var(--accent)"/><text x="705" y="281" fill="var(--surface)">G3</text></g>
-        <g><rect x="220" y="314" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="329" fill="var(--surface)">G4</text></g>
-        <g><rect x="220" y="61" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="76" fill="var(--surface)">G5</text></g>
-        <g><rect x="220" y="160" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="175" fill="var(--surface)">G6</text></g>
-        <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--accent)"/><text x="701" y="441" fill="var(--surface)">G1</text></g>
-        <g><rect x="520" y="140" width="30" height="22" rx="11" fill="var(--accent)"/><text x="535" y="155" fill="var(--surface)">G5</text></g>
+        <g><rect x="642" y="266" width="44" height="22" rx="11" fill="var(--accent)"/><text x="664" y="281" fill="var(--surface)">G2 G3</text></g>
+        <g><rect x="220" y="314" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="329" fill="var(--surface)">G3</text></g>
+        <g><rect x="220" y="160" width="30" height="22" rx="11" fill="var(--accent)"/><text x="235" y="175" fill="var(--surface)">G1</text></g>
+        <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--accent)"/><text x="701" y="441" fill="var(--surface)">G2</text></g>
       </g>
       <text x="20" y="530" font-size="13" fill="var(--muted)">Red badges mark where each goal's problem shows up today.</text>
     </svg>
@@ -240,7 +234,7 @@ body:not(.locked) #gate{display:none}
         <text x="36" y="72" font-size="15" font-weight="700" fill="var(--ink)">Shopify Plus + Markets</text>
         <text x="36" y="94" font-size="13" fill="var(--muted)">Storefront, checkout, markets</text>
         <text x="36" y="113" font-size="13" fill="var(--muted)">Inventory by location</text>
-        <text x="36" y="132" font-size="13" fill="var(--muted)">Order routing</text>
+        <text x="36" y="132" font-size="13" fill="var(--muted)">Pre-orders in every market</text>
 
         <rect x="20" y="170" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="196" font-size="15" font-weight="700" fill="var(--ink)">P500 pre-order app</text>
@@ -248,7 +242,7 @@ body:not(.locked) #gate{display:none}
 
         <rect x="20" y="247" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="273" font-size="15" font-weight="700" fill="var(--ink)">Duty and tax engine</text>
-        <text x="36" y="294" font-size="13" fill="var(--muted)">Zonos or a merchant of record</text>
+        <text x="36" y="294" font-size="13" fill="var(--muted)">Collects and remits (Zonos)</text>
 
         <rect x="20" y="324" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="350" font-size="15" font-weight="700" fill="var(--ink)">ShipStation + labels</text>
@@ -309,12 +303,11 @@ body:not(.locked) #gate{display:none}
       <text x="282" y="200" font-size="12" fill="var(--ok)">Orders + inventory</text>
 
       <g font-size="12" font-weight="700" text-anchor="middle">
-        <g><rect x="192" y="257" width="44" height="22" rx="11" fill="var(--ok)"/><text x="214" y="272" fill="var(--surface)">G1 G2</text></g>
-        <g><rect x="238" y="257" width="28" height="22" rx="11" fill="var(--ok)"/><text x="252" y="272" fill="var(--surface)">G3</text></g>
-        <g><rect x="220" y="333" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="348" fill="var(--surface)">G4</text></g>
-        <g><rect x="220" y="125" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="140" fill="var(--surface)">G5</text></g>
-        <g><rect x="220" y="179" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="194" fill="var(--surface)">G6</text></g>
-        <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--ok)"/><text x="701" y="441" fill="var(--surface)">G4</text></g>
+        <g><rect x="220" y="257" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="272" fill="var(--surface)">G2</text></g>
+        <g><rect x="220" y="333" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="348" fill="var(--surface)">G3</text></g>
+        <g><rect x="220" y="125" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="140" fill="var(--surface)">G1</text></g>
+        <g><rect x="220" y="179" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="194" fill="var(--surface)">G1</text></g>
+        <g><rect x="686" y="426" width="30" height="22" rx="11" fill="var(--ok)"/><text x="701" y="441" fill="var(--surface)">G3</text></g>
       </g>
       <text x="20" y="530" font-size="13" fill="var(--muted)">Green badges mark where each goal gets solved.</text>
     </svg>
@@ -328,21 +321,26 @@ body:not(.locked) #gate{display:none}
     </div>
   </div>
 
-  <h2>Two ways to handle compliance</h2>
-  <p class="lede">Everything else on this page works the same either way. The real choice is who acts as the legal seller on international orders.</p>
+  <h2>The recommended setup</h2>
+  <p class="lede">Shopify Markets keeps P500 open to every player. Two add-ons cover what Markets doesn't do on its own: remitting the taxes and duties, and cheaper labels.</p>
   <div class="paths">
     <div class="path rec">
-      <span class="tag ok">Current direction</span>
-      <h3>GMT stays the seller, with the right tools</h3>
-      <p>Shopify Markets for localized selling, a duty and tax engine (Zonos) to calculate and guarantee landed cost, and DDP shipping labels so duties are prepaid. GMT keeps control of checkout, P500 and pricing.</p>
+      <span class="tag ok">Pre-orders</span>
+      <h3>Shopify Markets</h3>
+      <p>Local currency, localized storefronts and duties shown at checkout, with P500 pre-orders available to international players.</p>
     </div>
-    <div class="path">
-      <span class="tag warn">Worth evaluating</span>
-      <h3>A merchant of record takes over</h3>
-      <p>A provider such as Global-e or ESW becomes the legal seller on international orders and takes on tax registration and remittance. It hands off the most work, but needs confirming against P500, multiple ship-from locations, and pricing.</p>
+    <div class="path rec">
+      <span class="tag ok">Remittance</span>
+      <h3>Zonos Duty and Tax</h3>
+      <p>Calculates guaranteed duties and taxes at checkout, pays the customs bill, and remits VAT so GMT doesn't need to register for IOSS or a UK VAT ID.</p>
+    </div>
+    <div class="path rec">
+      <span class="tag ok">Shipping rates</span>
+      <h3>Discounted labels and consolidators</h3>
+      <p>Shopify Shipping's discounted labels, plus consolidators in ShipStation that pool parcels into the EU and UK.</p>
     </div>
   </div>
-  <p style="margin-top:12px;color:var(--muted);font-size:15px">Why not Shopify Managed Markets? See the comparison below. In short, P500's charge-later model and GMT's non-US locations are a poor fit, so it's set aside for now.</p>
+  <p style="margin-top:12px;color:var(--muted);font-size:15px">Why not Managed Markets? It doesn't let international customers place pre-orders, and P500 depends on them. The comparison below shows the other differences.</p>
 
   <h2>Shopify Markets vs. Managed Markets</h2>
   <p class="lede">Both run on the same Shopify store. Markets is the foundation every international store uses. Managed Markets adds Global-e on top as the merchant of record. Here's what changes.</p>
@@ -380,7 +378,7 @@ body:not(.locked) #gate{display:none}
         <tr><th scope="row">Labels</th><td class="yes">Any carrier, consolidator or ShipStation</td><td class="no">Merchant of record benefits only apply on Managed Markets labels</td></tr>
         <tr><th scope="row">Subscriptions</th><td class="yes">Supported</td><td class="no">Domestic orders only</td></tr>
         <tr><th scope="row">B2B distributors</th><td class="yes">Supported</td><td class="no">Not supported. GMT is merchant of record for B2B</td></tr>
-        <tr><th scope="row">P500 pre-orders</th><td class="yes">Supported, with Shopify's pre-order rules</td><td class="no">Not documented. Needs confirming</td></tr>
+        <tr><th scope="row">P500 pre-orders</th><td class="yes">Available to international players, with Shopify's pre-order rules</td><td class="no">Not available to international customers</td></tr>
 
         <tr class="group"><th colspan="3" scope="colgroup">The same on both</th></tr>
         <tr><th scope="row">Localization</th><td colspan="2">Localized domains with automatic redirects, automatic localization by location and browser language, and store translation</td></tr>
@@ -394,69 +392,45 @@ body:not(.locked) #gate{display:none}
   <div class="solutions">
 
     <div class="sol">
-      <h3><span class="badge">G1</span>Get compliant on VAT, GST and duties</h3>
+      <h3><span class="badge">G1</span>Pre-orders for every player</h3>
       <ul>
-        <li>Every product gets an HS code and country of origin. Shopify uses these to calculate duties and import taxes at checkout (<a href="https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties">Help Center</a>).</li>
-        <li>Zonos Duty and Tax adds a landed-cost engine. Per its listing, Zonos pays any difference on the customs bill, so GMT only pays what it collected (<a href="https://apps.shopify.com/duty-and-tax-calculator-iglobal-stores">Shopify App Store</a>).</li>
+        <li>GMT sells internationally through Shopify Markets: local currency, localized storefronts and per-market pricing from a single admin (<a href="https://help.shopify.com/en/manual/international/managed-markets/compare">Help Center</a>).</li>
+        <li>The P500 app keeps the card on file and charges when the game ships. Shopify's pre-order rules still apply: customers can't use local payment methods for pre-orders, and the supported gateways include Shopify Payments (<a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">shopify.dev</a>).</li>
+        <li>Duties can change between the pre-order and the charge. GMT needs to decide whether to absorb the difference, or recalculate and pass it on when the order is charged.</li>
       </ul>
-      <div class="where">On the diagram: replaces the guesswork on the Hanford to international and EU lanes.</div>
+      <div class="where">On the diagram: the Shopify Plus + Markets box and the P500 pre-order app.</div>
     </div>
 
     <div class="sol">
-      <h3><span class="badge">G2</span>No surprise customs bills</h3>
+      <h3><span class="badge">G2</span>Tax and duty remittance</h3>
       <ul>
-        <li>Duties and taxes are collected at checkout. Each market can show them as a separate line item or include them in the price (<a href="https://help.shopify.com/en/manual/markets/customizations/duties-and-taxes">Help Center</a>).</li>
-        <li>Orders ship on DDP labels, so the duty is already paid when the box arrives. Shopify requires a DDP-capable carrier when it collects duties at checkout.</li>
+        <li>Zonos Duty and Tax "calculates guaranteed duties, taxes, and fees in your checkout," so players pay up front "instead of surprising them with costs during delivery" (<a href="https://apps.shopify.com/duty-and-tax-calculator-iglobal-stores">Shopify App Store</a>).</li>
+        <li>Remittance: per its listing, "Zonos remits VAT for you," with "no need to register for IOSS or obtain a UK VAT ID," and it includes "automated cross-border tax registration/remittance (IOSS, UK VAT, etc.)."</li>
+        <li>Guarantee: "Zonos pays any discrepancies on the customs bill, you only pay exactly what you collect."</li>
+        <li>Every product needs an HS code and country of origin so duties calculate correctly (<a href="https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties">Help Center</a>).</li>
       </ul>
-      <div class="where">On the diagram: the "International players" box now shows duties at checkout.</div>
+      <div class="where">On the diagram: the duty and tax engine box, which replaces the guesswork on the international and EU lanes.</div>
     </div>
 
     <div class="sol">
-      <h3><span class="badge">G3</span>Lighten the compliance load</h3>
-      <ul>
-        <li><strong>If GMT stays the seller:</strong> Zonos' listing says it remits VAT for you, with no need to register for IOSS or get a UK VAT ID. GMT still owns compliance in other countries.</li>
-        <li><strong>If a merchant of record takes over:</strong> the provider becomes the legal seller and handles registration and remittance where it operates.</li>
-      </ul>
-      <div class="where">On the diagram: the duty and tax engine box. This is where the two paths differ.</div>
-    </div>
-
-    <div class="sol">
-      <h3><span class="badge">G4</span>Better, accurate international rates</h3>
+      <h3><span class="badge">G3</span>Lower shipping rates</h3>
       <ul>
         <li>Shopify Shipping offers discounted labels from USPS, UPS, FedEx, DHL Express and DHL eCommerce for US merchants (<a href="https://help.shopify.com/en/manual/shipping/shopify-shipping/shipping-labels/united-states">Help Center</a>).</li>
-        <li>Through ShipStation, GMT can add consolidators such as Asendia, Landmark Global or ePost Global, which pool parcels into the EU and UK and offer DDP services. Rates are quoted per merchant, so we'd get quotes on GMT's actual box sizes.</li>
+        <li>Through ShipStation, GMT can add consolidators such as Asendia, Landmark Global or ePost Global. They pool parcels into the EU and UK and offer duties-paid services. Rates are quoted per merchant, so we'd get quotes on GMT's actual box sizes.</li>
         <li>Saved package sizes give rates priced on the real box, not just weight.</li>
       </ul>
       <div class="where">On the diagram: ShipStation + labels, plus a consolidator replacing the EU partner.</div>
-    </div>
-
-    <div class="sol">
-      <h3><span class="badge">G5</span>One view of every location</h3>
-      <ul>
-        <li>Hanford and the Australian 3PL each become a location in Shopify with their own inventory. Order routing can send Australian orders to the Australian 3PL first.</li>
-        <li>China stock keeps moving in bulk to Hanford and Australia. That matters because the US has suspended duty-free de minimis treatment on low-value imports (<a href="https://www.cbp.gov/trade/basic-import-export/e-commerce/faqs">U.S. CBP</a>), so shipping single parcels from China to US players would add a duty step on every box.</li>
-      </ul>
-      <div class="where">On the diagram: the dashed green lines from Shopify to each location.</div>
-    </div>
-
-    <div class="sol">
-      <h3><span class="badge">G6</span>P500 works for international players</h3>
-      <ul>
-        <li>The P500 app keeps the card on file and charges when the game ships. Shopify's pre-order rules apply: customers can't use local payment methods for pre-orders, and supported gateways include Shopify Payments (<a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">shopify.dev</a>).</li>
-        <li>Duties can change between the pre-order and the charge. GMT needs a business decision: absorb the change, or recalculate and pass it on when the order is charged.</li>
-      </ul>
-      <div class="where">On the diagram: the P500 pre-order app box, feeding the same duty and shipping flow at charge time.</div>
     </div>
   </div>
 
   <h2>Still to confirm</h2>
   <div class="card open">
     <ul>
-      <li>How Zonos shows duties at checkout (separate line or built into shipping), and whether it recalculates when a P500 order is charged later.</li>
-      <li>Whether DDP labels bought in ShipStation work with duties collected by Shopify at checkout. We'll test this before go-live.</li>
+      <li>Which countries Zonos remits for beyond the EU and UK (for example Canada and Australia), and where GMT would still need its own registration.</li>
+      <li>How Zonos handles a P500 order: are duties locked in at pre-order, or recalculated when the order is charged?</li>
+      <li>Which carriers and consolidators work with Zonos paying the duty bill, and whether that works through ShipStation.</li>
       <li>Consolidator quotes on GMT's real box sizes into the EU, UK, Canada and Australia.</li>
-      <li>Whether orders shipped from the Australian 3PL are covered by the duty and tax engine, or handled as domestic Australian sales.</li>
-      <li>If GMT wants a merchant of record: whether that provider supports charge-later pre-orders and ship-from locations outside the US.</li>
+      <li>How Zonos shows duties at checkout: as a separate line, or built into the shipping price.</li>
     </ul>
   </div>
 

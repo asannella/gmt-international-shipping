@@ -70,6 +70,35 @@ p{margin:0 0 12px}
 .status.prog{background:var(--sys-soft);color:var(--sys)}
 .status.open{background:var(--warn-soft);color:var(--warn)}
 .status.wait{background:var(--accent-soft);color:var(--accent)}
+a.sigcard{color:inherit;text-decoration:none;transition:border-color .15s ease,transform .15s ease}
+a.sigcard:hover{border-color:var(--ok);transform:translateY(-1px)}
+.sigcard .goalline{color:var(--muted);font-size:15px;margin:0}
+.sigcard .next{font-size:15px}
+.sigcard .next .label{display:block}
+.sigcard .jump{font-size:14px;color:var(--accent);text-decoration:underline;margin-top:auto}
+.badge.g{background:var(--ok)}
+.owners{display:flex;flex-wrap:wrap;gap:6px}
+.owner{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:1px}
+.owners .owner{margin-right:0}
+.owner.gmt{background:var(--loc-soft);color:var(--loc)}
+.owner.praella{background:var(--sys-soft);color:var(--sys)}
+.owner.shopify{background:var(--ok-soft);color:var(--ok)}
+.gd{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:16px;scroll-margin-top:16px}
+.gd-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
+.gd-head h3{margin:0;font-size:19px}
+.gd-head .badge{margin-right:0}
+.gd-solving{background:var(--bg);border-left:3px solid var(--ok);border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:16px}
+.gd-solving .label{display:block;margin-bottom:2px}
+.gd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.gd .label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:10px 0 6px}
+.gd ul{margin:0;padding-left:20px}
+.gd li{margin:5px 0}
+.gd ul.check,.gd ul.todo{list-style:none;padding-left:0}
+.gd ul.check li{padding-left:22px;position:relative}
+.gd ul.check li::before{content:"";position:absolute;left:2px;top:7px;width:10px;height:6px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.gd .where{font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px;margin-top:14px}
+a.badgelink{cursor:pointer}
+a.badgelink:hover rect{filter:brightness(1.15)}
 html{scroll-behavior:smooth}
 .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
 .path{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)}
@@ -115,60 +144,35 @@ body:not(.locked) #gate{display:none}
 <main aria-hidden="true">
   <div class="eyebrow">GMT Games · International selling · Draft for discussion</div>
   <h1>Getting GMT's games to players worldwide, without the hassle</h1>
-  <p class="lede">GMT already ships to every country it legally can from Hanford. International players need to be able to pre-order through P500 just like US players, which is why GMT is building on Shopify Markets rather than Managed Markets. That leaves two jobs to solve: getting international taxes and duties collected and remitted correctly, and getting the box to the player for less.</p>
+  <p class="lede">GMT is building on Shopify Markets so every player, in the US and around the world, can place a P500 pre-order. Three goals stand between here and signature.</p>
 
   <h2 id="signature">Path to signature</h2>
-  <p class="lede">On October 30, GMT named three things to resolve before signing. Here's where each one stands.</p>
+  <p class="lede">On October 30, GMT named three things to resolve before signing. Each one maps to a goal, and each goal carries the same G tag through the rest of this page.</p>
   <div class="sig">
-    <div class="sigcard">
+    <a class="sigcard" href="#g1">
       <span class="status prog">In progress</span>
-      <h3>P500 app pinned down</h3>
-      <div class="meta"><strong>Owner:</strong> Praella, with GMT</div>
-      <div class="label">Resolved on 10/30</div>
-      <ul>
-        <li>A $0 pre-order creates a real Shopify order record</li>
-        <li>The price locks at the time of order</li>
-        <li>Mixed carts split into separate orders, with messaging at checkout</li>
-        <li>Auto-orders follow designer and series rules</li>
-        <li>Warranty covers 90 days plus the first quarterly cycle</li>
-      </ul>
-      <div class="label">Still to come</div>
-      <ul>
-        <li>Praella's draft of the app experience</li>
-        <li>Praella's appendix of resolved questions</li>
-      </ul>
-      <a class="jump" href="#g1">See how pre-orders work on Markets</a>
-    </div>
-    <div class="sigcard">
+      <h3><span class="badge g">G1</span>P500 pre-orders for every player</h3>
+      <p class="goalline">Shopify Markets plus a P500 app that's pinned down and understood by everyone.</p>
+      <div class="owners"><span class="owner praella">Praella</span><span class="owner gmt">GMT</span></div>
+      <div class="next"><span class="label">Next step</span>Praella's draft of the P500 app experience</div>
+      <span class="jump">See G1 details</span>
+    </a>
+    <a class="sigcard" href="#g2">
       <span class="status open">Open</span>
-      <h3>Tax filing, international and domestic</h3>
-      <div class="meta"><strong>Owner:</strong> Shopify and Praella</div>
-      <div class="label">Still to come</div>
-      <ul>
-        <li>A vetted pick for international tax and duty remittance. Zonos is the current candidate.</li>
-        <li>A domestic setup: Shopify Tax for calculation plus a filing partner. Praella is introducing options.</li>
-      </ul>
-      <a class="jump" href="#g2">See the tax and duty solution</a>
-    </div>
-    <div class="sigcard">
+      <h3><span class="badge g">G2</span>Taxes handled and filed, international and US</h3>
+      <p class="goalline">Duties and taxes collected at checkout, then remitted and filed without GMT touching them.</p>
+      <div class="owners"><span class="owner shopify">Shopify</span><span class="owner praella">Praella</span></div>
+      <div class="next"><span class="label">Next step</span>A vetted pick for international remittance and a US filing partner</div>
+      <span class="jump">See G2 details</span>
+    </a>
+    <a class="sigcard" href="#g3">
       <span class="status wait">Waiting on package data</span>
-      <h3>Shipping rates with real numbers</h3>
-      <div class="meta"><strong>Owners:</strong> GMT (package spreadsheet), Shopify (Shopify Shipping rates and label printing), Praella (ShipStation demo)</div>
-      <div class="label">Still to come</div>
-      <ul>
-        <li>Sample rates on GMT's real box sizes and destinations</li>
-        <li>A walkthrough of printing labels in bulk from the Shopify admin</li>
-        <li>ShipStation demo and rate comparison</li>
-      </ul>
-      <a class="jump" href="#g3">See the shipping rate solution</a>
-    </div>
-  </div>
-
-  <h2>What the solution needs to do</h2>
-  <div class="goals">
-    <div class="goal"><h3><span class="badge">G1</span>Pre-orders for every player</h3><p>Stay on Shopify Markets so international players can place P500 pre-orders and get charged when the game ships.</p></div>
-    <div class="goal"><h3><span class="badge">G2</span>Tax and duty remittance</h3><p>Collect international taxes and duties at checkout, and have them remitted for GMT, so players never get a customs bill on delivery.</p></div>
-    <div class="goal"><h3><span class="badge">G3</span>Lower shipping rates</h3><p>Cheaper international shipping out of the US, priced on the real box size and weight.</p></div>
+      <h3><span class="badge g">G3</span>Lower shipping rates, proven with real numbers</h3>
+      <p class="goalline">Sample rates on GMT's real boxes, so the savings are numbers, not a feeling.</p>
+      <div class="owners"><span class="owner gmt">GMT</span><span class="owner shopify">Shopify</span><span class="owner praella">Praella</span></div>
+      <div class="next"><span class="label">Next step</span>GMT's package spreadsheet: dimensions, weights and destinations</div>
+      <span class="jump">See G3 details</span>
+    </a>
   </div>
 
   <h2>How it fits together</h2>
@@ -198,8 +202,8 @@ body:not(.locked) #gate{display:none}
         <text x="36" y="217" font-size="13" fill="var(--muted)">Vaulted card, charge later</text>
 
         <rect x="20" y="247" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
-        <text x="36" y="273" font-size="15" font-weight="700" fill="var(--ink)">Duty and tax engine</text>
-        <text x="36" y="294" font-size="13" fill="var(--muted)">Collects and remits (Zonos)</text>
+        <text x="36" y="273" font-size="15" font-weight="700" fill="var(--ink)">Tax and duty</text>
+        <text x="36" y="294" font-size="13" fill="var(--muted)">Zonos, plus a US filing partner</text>
 
         <rect x="20" y="324" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="350" font-size="15" font-weight="700" fill="var(--ink)">ShipStation + labels</text>
@@ -251,13 +255,13 @@ body:not(.locked) #gate{display:none}
       <text x="282" y="200" font-size="12" fill="var(--ok)">Orders + inventory</text>
 
       <g font-size="12" font-weight="700" text-anchor="middle">
-        <g><rect x="220" y="257" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="272" fill="var(--surface)">G2</text></g>
-        <g><rect x="220" y="333" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="348" fill="var(--surface)">G3</text></g>
-        <g><rect x="228" y="56" width="30" height="22" rx="11" fill="var(--ok)"/><text x="243" y="71" fill="var(--surface)">G1</text></g>
-        <g><rect x="220" y="179" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="194" fill="var(--surface)">G1</text></g>
-        <g><rect x="518" y="240" width="30" height="22" rx="11" fill="var(--ok)"/><text x="533" y="255" fill="var(--surface)">G3</text></g>
+        <a href="#g2" class="badgelink"><g><rect x="220" y="257" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="272" fill="var(--surface)">G2</text></g></a>
+        <a href="#g3" class="badgelink"><g><rect x="220" y="333" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="348" fill="var(--surface)">G3</text></g></a>
+        <a href="#g1" class="badgelink"><g><rect x="228" y="56" width="30" height="22" rx="11" fill="var(--ok)"/><text x="243" y="71" fill="var(--surface)">G1</text></g></a>
+        <a href="#g1" class="badgelink"><g><rect x="220" y="179" width="30" height="22" rx="11" fill="var(--ok)"/><text x="235" y="194" fill="var(--surface)">G1</text></g></a>
+        <a href="#g3" class="badgelink"><g><rect x="518" y="240" width="30" height="22" rx="11" fill="var(--ok)"/><text x="533" y="255" fill="var(--surface)">G3</text></g></a>
       </g>
-      <text x="20" y="530" font-size="13" fill="var(--muted)">Green badges mark where each goal gets solved.</text>
+      <text x="20" y="530" font-size="13" fill="var(--muted)">Badges mark where each goal gets solved. Click one to jump to its details.</text>
     </svg>
     </div>
 
@@ -268,29 +272,121 @@ body:not(.locked) #gate{display:none}
     </div>
   </div>
 
-  <h2>The recommended setup</h2>
-  <p class="lede">Shopify Markets keeps P500 open to every player. Two add-ons cover what Markets doesn't do on its own: remitting the taxes and duties, and cheaper labels.</p>
-  <div class="paths">
-    <div class="path rec">
-      <span class="tag ok">Pre-orders</span>
-      <h3>Shopify Markets</h3>
-      <p>Local currency, localized storefronts and duties shown at checkout, with P500 pre-orders available to international players.</p>
+  <h2>Goal details</h2>
+
+  <section class="gd" id="g1">
+    <div class="gd-head"><span class="badge g">G1</span><h3>P500 pre-orders for every player</h3><span class="status prog">In progress</span></div>
+    <div class="gd-solving"><span class="label">What we're solving</span>"Being able to accept a P500 pre-order that does not require payment upfront is a requirement for everything." Jason Carr, October 30</div>
+    <div class="gd-grid">
+      <div>
+        <div class="label">The solution</div>
+        <ul>
+          <li>GMT sells internationally through Shopify Markets: local currency, localized storefronts and per-market pricing from a single admin (<a href="https://help.shopify.com/en/manual/international/managed-markets/compare">Help Center</a>).</li>
+          <li>The P500 app keeps the card on file and charges when the game ships. Shopify's pre-order rules still apply: customers can't use local payment methods for pre-orders, and the supported gateways include Shopify Payments (<a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">shopify.dev</a>).</li>
+        </ul>
+        <div class="label">Confirmed on 10/30</div>
+        <ul class="check">
+          <li>Shopify Markets, not Managed Markets, so international players pre-order with nothing charged upfront</li>
+          <li>A $0 pre-order creates a real Shopify order, tagged P500 and visible in the customer's account</li>
+          <li>The price locks at the time of order. Later price changes only apply to new orders</li>
+          <li>Mixed carts split into separate orders, with messaging at checkout and in the confirmation email</li>
+          <li>Auto-orders follow designer and series rules</li>
+          <li>Warranty covers 90 days plus the first quarterly cycle</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label">Still to come</div>
+        <ul class="todo">
+          <li><span class="owner praella">Praella</span>Draft of the P500 app experience</li>
+          <li><span class="owner praella">Praella</span>Review designer and series rules with engineering</li>
+          <li><span class="owner gmt">GMT</span>Revise email flows. <span class="owner praella">Praella</span>Map each P500 notification</li>
+          <li><span class="owner praella">Praella</span>Appendix of resolved questions, attached to the contract</li>
+        </ul>
+        <div class="label">Open questions</div>
+        <ul>
+          <li>Duties can change between the pre-order and the charge. Does GMT absorb the difference, or recalculate and pass it on when the order is charged?</li>
+        </ul>
+      </div>
     </div>
-    <div class="path rec">
-      <span class="tag ok">Remittance</span>
-      <h3>Zonos Duty and Tax</h3>
-      <p>Calculates guaranteed duties and taxes at checkout, pays the customs bill, and remits VAT so GMT doesn't need to register for IOSS or a UK VAT ID.</p>
+    <div class="where">On the diagram: the Shopify Plus + Markets box and the P500 pre-order app.</div>
+  </section>
+
+  <section class="gd" id="g2">
+    <div class="gd-head"><span class="badge g">G2</span><h3>Taxes handled and filed, international and US</h3><span class="status open">Open</span></div>
+    <div class="gd-solving"><span class="label">What we're solving</span>"I don't feel comfortable moving forward with a solution and saying we'll figure out tax filing for the US later." Jason Carr, October 30</div>
+    <div class="gd-grid">
+      <div>
+        <div class="label">The solution</div>
+        <ul>
+          <li><strong>What Markets does on its own:</strong> calculates and collects duties and import taxes at checkout. GMT stays the merchant of record, so remitting and filing still need a partner (<a href="https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties">Help Center</a>).</li>
+          <li><strong>International:</strong> Zonos Duty and Tax "calculates guaranteed duties, taxes, and fees in your checkout." Per its listing, "Zonos remits VAT for you," with "no need to register for IOSS or obtain a UK VAT ID," and "Zonos pays any discrepancies on the customs bill" (<a href="https://apps.shopify.com/duty-and-tax-calculator-iglobal-stores">Shopify App Store</a>).</li>
+          <li><strong>US:</strong> Shopify Tax calculates sales tax, and a filing partner files the returns. Praella recommended partners such as Numeral and offered introductions.</li>
+          <li>Every product needs an HS code and country of origin so duties calculate correctly.</li>
+        </ul>
+        <div class="label">Confirmed on 10/30</div>
+        <ul class="check">
+          <li>GMT doesn't need to be the merchant of record, as long as taxes and duties are handled and filed</li>
+          <li>Both international and US filing need a vetted answer before implementation starts</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label">Still to come</div>
+        <ul class="todo">
+          <li><span class="owner shopify">Shopify</span>A vetted pick for international tax and duty remittance</li>
+          <li><span class="owner praella">Praella</span>Introductions to US filing partners</li>
+        </ul>
+        <div class="label">Open questions</div>
+        <ul>
+          <li>Which countries Zonos remits for beyond the EU and UK (for example Canada and Australia), and where GMT would still need its own registration</li>
+          <li>How Zonos handles a P500 order: are duties locked in at pre-order, or recalculated when the order is charged?</li>
+          <li>How Zonos shows duties at checkout: as a separate line, or built into the shipping price</li>
+        </ul>
+      </div>
     </div>
-    <div class="path rec">
-      <span class="tag ok">Shipping rates</span>
-      <h3>Discounted labels and ShipStation rates</h3>
-      <p>Shopify Shipping's discounted labels and ShipStation's rates, compared on GMT's real boxes.</p>
+    <div class="where">On the diagram: the tax and duty box.</div>
+  </section>
+
+  <section class="gd" id="g3">
+    <div class="gd-head"><span class="badge g">G3</span><h3>Lower shipping rates, proven with real numbers</h3><span class="status wait">Waiting on package data</span></div>
+    <div class="gd-solving"><span class="label">What we're solving</span>"Our customers are going to save a lot of money, but I can't put numbers around it." Jason Carr, October 30</div>
+    <div class="gd-grid">
+      <div>
+        <div class="label">The solution</div>
+        <ul>
+          <li><strong>Shopify Shipping:</strong> discounted labels from USPS, UPS, FedEx, DHL Express and DHL eCommerce for US merchants (<a href="https://help.shopify.com/en/manual/shipping/shopify-shipping/shipping-labels/united-states">Help Center</a>).</li>
+          <li><strong>Printing at Hanford:</strong> "You can buy and print up to 250 shipping labels at the same time from the Orders page" (<a href="https://help.shopify.com/en/manual/fulfillment/fulfilling-orders/shipping-labels/buying-labels/buying-labels-in-bulk">Help Center</a>). No printing order by order.</li>
+          <li><strong>Duties and labels:</strong> on orders where duties are collected at checkout, Shopify Shipping labels are limited to carriers that support duties-paid shipping, such as DHL Express. The rate comparison needs to cover those carriers.</li>
+          <li><strong>ShipStation:</strong> Checkout Rates shows live rates at checkout for domestic and international orders, works with Shopify, and is "available at no extra cost" (<a href="https://www.shipstation.com/fulfillment/shipping/checkout-rates/">ShipStation</a>). It only wins if its rates beat GMT's current UPS contract.</li>
+        </ul>
+        <div class="label">Confirmed on 10/30</div>
+        <ul class="check">
+          <li>Every order ships from Hanford, including Australia</li>
+          <li>Fulfillment flexibility isn't the goal right now</li>
+          <li>Test the Shopify admin label workflow for real, with ShipStation as the backup</li>
+          <li>GMT's own UPS rates running through ShipStation isn't a win</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label">Still to come</div>
+        <ul class="todo">
+          <li><span class="owner gmt">GMT</span>Package spreadsheet: dimensions, weights and destinations</li>
+          <li><span class="owner shopify">Shopify</span>Shopify Shipping sample rates on those packages</li>
+          <li><span class="owner shopify">Shopify</span>Screenshot and walkthrough of bulk label printing in the admin</li>
+          <li><span class="owner praella">Praella</span>ShipStation demo and rate comparison</li>
+        </ul>
+        <div class="label">Open questions</div>
+        <ul>
+          <li>Whether ShipStation Checkout Rates shows ShipStation's own discounted rates or GMT's carrier account rates</li>
+          <li>Which carriers work with Zonos paying the duty bill, and whether that works through ShipStation</li>
+          <li>Whether packing slips print in the same batch as bulk labels</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <p style="margin-top:12px;color:var(--muted);font-size:15px">Why not Managed Markets? It doesn't let international customers place pre-orders, and P500 depends on them. The comparison below shows the other differences.</p>
+    <div class="where">On the diagram: ShipStation + labels, and every order shipping from Hanford.</div>
+  </section>
 
   <h2>Shopify Markets vs. Managed Markets</h2>
-  <p class="lede">Both run on the same Shopify store. Markets is the foundation every international store uses. Managed Markets adds Global-e on top as the merchant of record. Here's what changes.</p>
+  <p class="lede">Both run on the same Shopify store. Markets is the foundation every international store uses. Managed Markets adds Global-e on top as the merchant of record. It doesn't let international customers place pre-orders, and P500 depends on them. Here's what else changes.</p>
   <div class="cmp-wrap">
     <table class="cmp">
       <thead>
@@ -334,53 +430,6 @@ body:not(.locked) #gate{display:none}
     </table>
   </div>
   <p class="cmp-note">Sources: <a href="https://help.shopify.com/en/manual/international/managed-markets/compare">Managed Markets comparison</a>, <a href="https://help.shopify.com/en/manual/international/managed-markets/requirements-and-considerations">Managed Markets requirements</a>, <a href="https://help.shopify.com/en/manual/international/managed-markets/shipping">Managed Markets shipping</a> and <a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">pre-order limitations</a>. Managed Markets is open to businesses based in the continental US and some stores in Canada and the UK.</p>
-
-  <h2>How each goal gets solved</h2>
-  <div class="solutions">
-
-    <div class="sol" id="g1">
-      <h3><span class="badge">G1</span>Pre-orders for every player</h3>
-      <ul>
-        <li>GMT sells internationally through Shopify Markets: local currency, localized storefronts and per-market pricing from a single admin (<a href="https://help.shopify.com/en/manual/international/managed-markets/compare">Help Center</a>).</li>
-        <li>The P500 app keeps the card on file and charges when the game ships. Shopify's pre-order rules still apply: customers can't use local payment methods for pre-orders, and the supported gateways include Shopify Payments (<a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">shopify.dev</a>).</li>
-        <li>Duties can change between the pre-order and the charge. GMT needs to decide whether to absorb the difference, or recalculate and pass it on when the order is charged.</li>
-      </ul>
-      <div class="where">On the diagram: the Shopify Plus + Markets box and the P500 pre-order app.</div>
-    </div>
-
-    <div class="sol" id="g2">
-      <h3><span class="badge">G2</span>Tax and duty remittance</h3>
-      <ul>
-        <li>Zonos Duty and Tax "calculates guaranteed duties, taxes, and fees in your checkout," so players pay up front "instead of surprising them with costs during delivery" (<a href="https://apps.shopify.com/duty-and-tax-calculator-iglobal-stores">Shopify App Store</a>).</li>
-        <li>Remittance: per its listing, "Zonos remits VAT for you," with "no need to register for IOSS or obtain a UK VAT ID," and it includes "automated cross-border tax registration/remittance (IOSS, UK VAT, etc.)."</li>
-        <li>Guarantee: "Zonos pays any discrepancies on the customs bill, you only pay exactly what you collect."</li>
-        <li>Every product needs an HS code and country of origin so duties calculate correctly (<a href="https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties">Help Center</a>).</li>
-      </ul>
-      <div class="where">On the diagram: the duty and tax engine box, which replaces the guesswork on the international and EU lanes.</div>
-    </div>
-
-    <div class="sol" id="g3">
-      <h3><span class="badge">G3</span>Lower shipping rates</h3>
-      <ul>
-        <li>Shopify Shipping offers discounted labels from USPS, UPS, FedEx, DHL Express and DHL eCommerce for US merchants (<a href="https://help.shopify.com/en/manual/shipping/shopify-shipping/shipping-labels/united-states">Help Center</a>).</li>
-        <li>ShipStation Checkout Rates shows live rates at checkout for domestic and international orders, works with Shopify, and is "available at no extra cost" (<a href="https://www.shipstation.com/fulfillment/shipping/checkout-rates/">ShipStation</a>). A demo on GMT's real boxes will show how its rates compare.</li>
-        <li>Saved package sizes give rates priced on the real box, not just weight.</li>
-      </ul>
-      <div class="where">On the diagram: ShipStation + labels, and every order shipping from Hanford.</div>
-    </div>
-  </div>
-
-  <h2>Still to confirm</h2>
-  <div class="card open">
-    <ul>
-      <li>Which countries Zonos remits for beyond the EU and UK (for example Canada and Australia), and where GMT would still need its own registration.</li>
-      <li>How Zonos handles a P500 order: are duties locked in at pre-order, or recalculated when the order is charged?</li>
-      <li>Which carriers work with Zonos paying the duty bill, and whether that works through ShipStation.</li>
-      <li>Sample rates on GMT's real box sizes into the EU, UK, Canada and Australia.</li>
-      <li>Whether ShipStation Checkout Rates shows ShipStation's own discounted rates or GMT's carrier account rates.</li>
-      <li>How Zonos shows duties at checkout: as a separate line, or built into the shipping price.</li>
-    </ul>
-  </div>
 
   <div class="foot">Prepared by Shopify for GMT Games. Draft for discussion, October 30, 2026. Third-party capabilities are taken from each provider's own listing and should be confirmed with them directly.</div>
 </main>

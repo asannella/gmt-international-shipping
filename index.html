@@ -104,17 +104,6 @@ html{scroll-behavior:smooth}
 .path{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg)}
 .path.rec{border-color:var(--ok)}
 .open li{margin:6px 0}
-.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
-table.cmp{border-collapse:collapse;width:100%;min-width:680px;font-size:15px}
-.cmp th,.cmp td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
-.cmp thead th{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--bg)}
-.cmp tbody th{font-weight:600;width:22%}
-.cmp td{color:var(--ink);width:39%}
-.cmp tr.group th{background:var(--bg);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:16px}
-.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
-.cmp .yes{color:var(--ok);font-weight:600}
-.cmp .no{color:var(--warn);font-weight:600}
-.cmp-note{font-size:14px;color:var(--muted);margin-top:10px}
 a{color:var(--accent)}
 .foot{margin-top:56px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
 /* gate */
@@ -384,52 +373,6 @@ body:not(.locked) #gate{display:none}
     </div>
     <div class="where">On the diagram: ShipStation + labels, and every order shipping from Hanford.</div>
   </section>
-
-  <h2>Shopify Markets vs. Managed Markets</h2>
-  <p class="lede">Both run on the same Shopify store. Markets is the foundation every international store uses. Managed Markets adds Global-e on top as the merchant of record. It doesn't let international customers place pre-orders, and P500 depends on them. Here's what else changes.</p>
-  <div class="cmp-wrap">
-    <table class="cmp">
-      <thead>
-        <tr><th scope="col">Feature</th><th scope="col">Shopify Markets</th><th scope="col">Managed Markets</th></tr>
-      </thead>
-      <tbody>
-        <tr class="group"><th colspan="3" scope="colgroup">Who is responsible</th></tr>
-        <tr><th scope="row">Merchant of record</th><td>GMT</td><td>Global-e</td></tr>
-        <tr><th scope="row">Tax registration</th><td>GMT registers where required</td><td>Not needed in local destinations</td></tr>
-        <tr><th scope="row">Remitting duties and taxes</th><td>GMT</td><td>Remitted on GMT's behalf</td></tr>
-
-        <tr class="group"><th colspan="3" scope="colgroup">Duties and taxes</th></tr>
-        <tr><th scope="row">At checkout</th><td>Duty and tax estimate at checkout</td><td>Calculated and collected automatically</td></tr>
-        <tr><th scope="row">DDP shipping</th><td>When the carrier and integration support it</td><td>With DHL Express, DHL eCommerce, FedEx and UPS</td></tr>
-        <tr><th scope="row">HS codes</th><td>GMT adds them to products</td><td>Assigned automatically</td></tr>
-        <tr><th scope="row">If customs charges more</th><td>GMT pays the difference</td><td>Duties and tax guarantee covers extra fees</td></tr>
-        <tr><th scope="row">Restricted products</th><td>GMT manages</td><td>Blocked from shipping automatically</td></tr>
-
-        <tr class="group"><th colspan="3" scope="colgroup">Payments and pricing</th></tr>
-        <tr><th scope="row">Local currency</th><td>Sell in local currency with Shopify Payments</td><td>Limited to a list of compatible currencies</td></tr>
-        <tr><th scope="row">Local payment methods</th><td>A selection of local payment methods</td><td>More local payment methods, with better transaction success rates</td></tr>
-        <tr><th scope="row">Fraud chargebacks</th><td>Shopify Payments fraud analysis</td><td>US orders reviewed and given fraud chargeback protection</td></tr>
-        <tr><th scope="row">Refunds</th><td>No rate lock</td><td>Original conversion rate for 30 days</td></tr>
-        <tr><th scope="row">International pricing</th><td>Managed manually, with custom pricing by market</td><td>Prices shown with duties and import tax included</td></tr>
-
-        <tr class="group"><th colspan="3" scope="colgroup">Shipping</th></tr>
-        <tr><th scope="row">Labels</th><td>Discounted labels without duties prepaid, or a third-party app</td><td>Discounted DHL Express, DHL eCommerce, FedEx and UPS labels</td></tr>
-        <tr><th scope="row">Other</th><td>Any carrier or app GMT chooses</td><td>Automatic delivery address correction</td></tr>
-
-        <tr class="group"><th colspan="3" scope="colgroup">How it fits GMT</th></tr>
-        <tr><th scope="row">Ship from</th><td class="yes">Any location, including Hanford and future 3PLs</td><td class="no">Needs a fulfillment location in the continental US</td></tr>
-        <tr><th scope="row">Labels</th><td class="yes">Any carrier or ShipStation</td><td class="no">Merchant of record benefits only apply on Managed Markets labels</td></tr>
-        <tr><th scope="row">Subscriptions</th><td class="yes">Supported</td><td class="no">Domestic orders only</td></tr>
-        <tr><th scope="row">B2B distributors</th><td class="yes">Supported</td><td class="no">Not supported. GMT is merchant of record for B2B</td></tr>
-        <tr><th scope="row">P500 pre-orders</th><td class="yes">Available to international players, with Shopify's pre-order rules</td><td class="no">Not available to international customers</td></tr>
-
-        <tr class="group"><th colspan="3" scope="colgroup">The same on both</th></tr>
-        <tr><th scope="row">Localization</th><td colspan="2">Localized domains with automatic redirects, automatic localization by location and browser language, and store translation</td></tr>
-        <tr><th scope="row">Operations</th><td colspan="2">Every market managed from a single admin, with custom pricing by market</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="cmp-note">Sources: <a href="https://help.shopify.com/en/manual/international/managed-markets/compare">Managed Markets comparison</a>, <a href="https://help.shopify.com/en/manual/international/managed-markets/requirements-and-considerations">Managed Markets requirements</a>, <a href="https://help.shopify.com/en/manual/international/managed-markets/shipping">Managed Markets shipping</a> and <a href="https://shopify.dev/docs/apps/build/purchase-options/deferred">pre-order limitations</a>. Managed Markets is open to businesses based in the continental US and some stores in Canada and the UK.</p>
 
   <div class="foot">Prepared by Shopify for GMT Games. Draft for discussion, October 30, 2026. Third-party capabilities are taken from each provider's own listing and should be confirmed with them directly.</div>
 </main>

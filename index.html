@@ -203,7 +203,7 @@ body:not(.locked) #gate{display:none}
 
         <rect x="20" y="324" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="350" font-size="15" font-weight="700" fill="var(--ink)">ShipStation + labels</text>
-        <text x="36" y="371" font-size="13" fill="var(--muted)">DDP carriers and consolidators</text>
+        <text x="36" y="371" font-size="13" fill="var(--muted)">Rate shopping and DDP labels</text>
 
         <rect x="20" y="401" width="250" height="62" rx="10" fill="var(--sys-soft)" stroke="var(--sys)"/>
         <text x="36" y="427" font-size="15" font-weight="700" fill="var(--ink)">B2B on Shopify</text>
@@ -283,8 +283,8 @@ body:not(.locked) #gate{display:none}
     </div>
     <div class="path rec">
       <span class="tag ok">Shipping rates</span>
-      <h3>Discounted labels and consolidators</h3>
-      <p>Shopify Shipping's discounted labels, plus consolidators in ShipStation that pool parcels into the EU and UK.</p>
+      <h3>Discounted labels and ShipStation rates</h3>
+      <p>Shopify Shipping's discounted labels and ShipStation's rates, compared on GMT's real boxes.</p>
     </div>
   </div>
   <p style="margin-top:12px;color:var(--muted);font-size:15px">Why not Managed Markets? It doesn't let international customers place pre-orders, and P500 depends on them. The comparison below shows the other differences.</p>
@@ -321,8 +321,8 @@ body:not(.locked) #gate{display:none}
         <tr><th scope="row">Other</th><td>Any carrier or app GMT chooses</td><td>Automatic delivery address correction</td></tr>
 
         <tr class="group"><th colspan="3" scope="colgroup">How it fits GMT</th></tr>
-        <tr><th scope="row">Ship from</th><td class="yes">Any location: Hanford, the Australian 3PL, future 3PLs</td><td class="no">Needs a fulfillment location in the continental US</td></tr>
-        <tr><th scope="row">Labels</th><td class="yes">Any carrier, consolidator or ShipStation</td><td class="no">Merchant of record benefits only apply on Managed Markets labels</td></tr>
+        <tr><th scope="row">Ship from</th><td class="yes">Any location, including Hanford and future 3PLs</td><td class="no">Needs a fulfillment location in the continental US</td></tr>
+        <tr><th scope="row">Labels</th><td class="yes">Any carrier or ShipStation</td><td class="no">Merchant of record benefits only apply on Managed Markets labels</td></tr>
         <tr><th scope="row">Subscriptions</th><td class="yes">Supported</td><td class="no">Domestic orders only</td></tr>
         <tr><th scope="row">B2B distributors</th><td class="yes">Supported</td><td class="no">Not supported. GMT is merchant of record for B2B</td></tr>
         <tr><th scope="row">P500 pre-orders</th><td class="yes">Available to international players, with Shopify's pre-order rules</td><td class="no">Not available to international customers</td></tr>
@@ -363,7 +363,7 @@ body:not(.locked) #gate{display:none}
       <h3><span class="badge">G3</span>Lower shipping rates</h3>
       <ul>
         <li>Shopify Shipping offers discounted labels from USPS, UPS, FedEx, DHL Express and DHL eCommerce for US merchants (<a href="https://help.shopify.com/en/manual/shipping/shopify-shipping/shipping-labels/united-states">Help Center</a>).</li>
-        <li>Through ShipStation, GMT can add consolidators such as Asendia, Landmark Global or ePost Global. They pool parcels into the EU and UK and offer duties-paid services. Rates are quoted per merchant, so we'd get quotes on GMT's actual box sizes.</li>
+        <li>ShipStation Checkout Rates shows live rates at checkout for domestic and international orders, works with Shopify, and is "available at no extra cost" (<a href="https://www.shipstation.com/fulfillment/shipping/checkout-rates/">ShipStation</a>). A demo on GMT's real boxes will show how its rates compare.</li>
         <li>Saved package sizes give rates priced on the real box, not just weight.</li>
       </ul>
       <div class="where">On the diagram: ShipStation + labels, and every order shipping from Hanford.</div>
@@ -375,8 +375,9 @@ body:not(.locked) #gate{display:none}
     <ul>
       <li>Which countries Zonos remits for beyond the EU and UK (for example Canada and Australia), and where GMT would still need its own registration.</li>
       <li>How Zonos handles a P500 order: are duties locked in at pre-order, or recalculated when the order is charged?</li>
-      <li>Which carriers and consolidators work with Zonos paying the duty bill, and whether that works through ShipStation.</li>
-      <li>Consolidator quotes on GMT's real box sizes into the EU, UK, Canada and Australia.</li>
+      <li>Which carriers work with Zonos paying the duty bill, and whether that works through ShipStation.</li>
+      <li>Sample rates on GMT's real box sizes into the EU, UK, Canada and Australia.</li>
+      <li>Whether ShipStation Checkout Rates shows ShipStation's own discounted rates or GMT's carrier account rates.</li>
       <li>How Zonos shows duties at checkout: as a separate line, or built into the shipping price.</li>
     </ul>
   </div>
